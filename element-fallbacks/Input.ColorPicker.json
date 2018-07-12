@@ -1,0 +1,20 @@
+{
+  "type": "Input.ChoiceSet",
+  "id": "{{id}}",
+  "style": "compact",
+  "value": "{{value}}",
+  "choices": [
+    {
+      "title": "Red",
+      "value": "#FF0000"
+    },
+    {
+      "title": "Green",
+      "value": "#00FF00"
+    },
+    {
+      "title": "Blue",
+      "value": "#0000FF"
+    }
+  ]
+}

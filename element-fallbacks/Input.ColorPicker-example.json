@@ -1,0 +1,5 @@
+{
+  "type": "Inpupt.ColorPicker",
+  "id": "LogoColor",
+  "value": "#FF0000"
+}
