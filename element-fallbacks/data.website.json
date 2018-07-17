@@ -1,0 +1,14 @@
+{
+  "type": "HostedCard",
+  "dataId": "{{#? url}}",
+  "dataLoader": "web",
+  "templateUrl": [
+    {
+      "{{#if 'templateUrl' in this}}": "{{templateUrl}}"
+    },
+    {
+      "{{#else}}": "adaptivecards.io/templates?id=general_website"
+    }
+  ],
+  "actionMode": "{{#? actionMode}}"
+}
