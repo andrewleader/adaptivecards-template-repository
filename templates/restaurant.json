@@ -1,0 +1,126 @@
+{
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "speak": "This is {{microdata.Restaurant[0].name}}",
+  "fallbackText": "This is {{microdata.Restaurant[0].name}}",
+  "knownLayouts": ["default", "compact"],
+  "header": {
+    "title": "{{microdata.Restaurant[0].name}}",
+    "image": "{{microdata.Restaurant[0].image}}"
+  },
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "Direction to {{microdata.Restaurant[0].name}}",
+      "url": "{{metatags['og:url'][0]}}"
+    }
+  ],
+  "body": [
+    {
+      "visibleLayouts": ["default"],
+      "type": "Container",
+      "items": [
+        {
+          "type": "Image",
+          "url": "{{microdata.Restaurant[0].image}}",
+          "size": "auto"
+        },
+        {
+          "type": "TextBlock",
+          "text": "{{microdata.Restaurant[0].name}}",
+          "weight": "bolder",
+          "size": "large"
+        },
+        {
+          "type": "ColumnSet",
+          "spacing": "none",
+          "columns": [
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "{{microdata.Restaurant[0].aggregateRating.ratingValue}} stars, {{microdata.Restaurant[0].aggregateRating.reviewCount}} reviews",
+                  "isSubtle": true
+                }
+              ]
+            },
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "Price range: {{microdata.Restaurant[0].priceRange}}",
+                  "spacing": "none"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "TextBlock",
+          "text": "{{microdata.Restaurant[0].telephone}} · {{microdata.Restaurant[0].address.streetAddress}} \\n{{microdata.Restaurant[0].address.addressLocality}}, {{microdata.Restaurant[0].address.addressRegion}} {{microdata.Restaurant[0].address.postalCode}}",
+          "wrap": true,
+          "maxLines": 2,
+          "spacing": "none",
+          "isSubtle": true
+        }
+      ]
+    },
+    {
+      "visibleLayouts": ["compact"],
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "size": "auto",
+          "width": 1,
+          "items": [
+            {
+              "type": "Image",
+              "url": "{{microdata.Restaurant[0].image}}",
+              "size": "medium"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": 3,
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "{{microdata.Restaurant[0].name}}",
+              "weight": "bolder",
+              "size": "medium"
+            },
+            {
+              "type": "ColumnSet",
+              "spacing": "none",
+              "columns": [
+                {
+                  "type": "Column",
+                  "items": [
+                    {
+                      "type": "TextBlock",
+                      "text": "{{microdata.Restaurant[0].aggregateRating.ratingValue}} stars, {{microdata.Restaurant[0].aggregateRating.reviewCount}} reviews",
+                      "isSubtle": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TextBlock",
+              "text": "Price range: {{microdata.Restaurant[0].priceRange}}",
+              "spacing": "none"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extensions": {
+    "attribution": "{{metatags.application-name[0]}}",
+    "unsupported": "Not supported"
+  }
+}
