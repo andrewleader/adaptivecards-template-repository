@@ -42,6 +42,12 @@
       "text": "{{value[0].name}}"
     },
     {
+      "{{#each value}}": {
+        "type": "TextBlock",
+        "text": "Deployment {{name}} - {{properties.author}}"
+      }
+    },
+    {
       "type": "TextBlock",
       "text": "{{value[1].name}}"
     },
