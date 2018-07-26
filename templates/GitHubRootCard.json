@@ -4,7 +4,9 @@
   "body": [
     {
       "type": "TextBlock",
-      "text": "Root card for {{subscriptionId}} - https://management.azure.com/subscriptions//resourceGroups/{{resourceGroupName}}/providers/Microsoft.Web/sites/{{siteName}}?api-version=2016-08-01"
+      "text":
+        "Root card for {{subscriptionId}} - https://management.azure.com/subscriptions//resourceGroups/{{resourceGroupName}}/providers/Microsoft.Web/sites/{{siteName}}?api-version=2016-08-01",
+      "wrap": true
     },
     {
       "type": "HostedCard",
