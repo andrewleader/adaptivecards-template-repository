@@ -1,30 +1,242 @@
 {
-  "type": "AdaptiveCard",
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "version": "1.0",
-  "data": "{{this}}",
-  "body": [
-    {
-      "type": "TextBlock",
-      "text":
-        "Root card for {{subscriptionId}}",
-      "wrap": true
-    },
-    {
-      "type": "HostedCard",
-      "id": "summaryAndLinks",
-      "dataId":
-        "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroup}}/providers/Microsoft.Web/sites/{{siteName}}?api-version=2016-08-01",
-      "templateUrl":
-        "https://adaptivecards-ex-templates.azurewebsites.net/api/templates/WebAppProperties"
-    },
-    {
-      "type": "HostedCard",
-      "id": "deployments",
-      "dataId":
-        "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroup}}/providers/Microsoft.Web/sites/{{siteName}}/deployments?api-version=2016-08-01",
-      "templateUrl":
-        "https://adaptivecards-ex-templates.azurewebsites.net/api/templates/Deployments"
-    }
-  ]
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Site Name:"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "spacing": "None",
+                            "text": "AdaptiveCard"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Resource Group:"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "spacing": "None",
+                            "text": "AdaptiveCards"
+                        }
+                    ],
+                    "width": {
+                        "physicalSize": 130,
+                        "unit": 1
+                    }
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Status:"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "spacing": "None",
+                            "text": "Running"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "Region:"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "spacing": "None",
+                            "text": "Central US"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "[Manage Site](https://adaptivecards.io) "
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "[Restart Site](https://adaptivecards.io) "
+                        }
+                    ],
+                    "width": "stretch"
+                }
+           ]
+        },
+        {
+            "type": "Container",
+            "spacing": "Large",
+            "separator": true,
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "weight": "Bolder",
+                    "text": "Deployments"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "horizontalAlignment": "Left",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-512.png",
+                            "size": "Small"
+                        }
+                    ],
+                    "width": "auto"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Deployed successfully to production"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "spacing": "Small",
+                            "text": "[Build 20180308.3](https://adaptivecards.io) \n[Release: 84](https://adaptivecards.io)"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "verticalContentAlignment": "Center",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "12:54:08 PM"
+                        }
+                    ],
+                    "width": "auto"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "separator": true,
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Close_Icon_Dark-512.png",
+                            "size": "Small"
+                        }
+                    ],
+                    "width": "auto"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Deployment failed to production"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "spacing": "Small",
+                            "text": "[Build 20180308.1](https://adaptivecards.io) \n[Release: 83](https://adaptivecards.io)"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "verticalContentAlignment": "Center",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "10:19:33 AM"
+                        }
+                    ],
+                    "width": "auto"
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "separator": true,
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-512.png",
+                            "size": "Small"
+                        }
+                    ],
+                    "width": "auto"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Deployed successfully to production"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "spacing": "Small",
+                            "text": "[Build 20180306.4](https://adaptivecards.io) \n[Release: 82](https://adaptivecards.io)"
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "verticalContentAlignment": "Center",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "11:20:42 AM"
+                        }
+                    ],
+                    "width": "auto"
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "spacing": "Large",
+            "separator": true,
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "weight": "Bolder",
+                    "text": "Metrics"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Requests and Errors"
+                }
+            ]
+        },
+        {
+            "type": "Image",
+            "url": "https://raw.githubusercontent.com/andrewleader/adaptivecards-template-repository/master/assets/metrics.jpg"
+        }
+    ]
 }
+

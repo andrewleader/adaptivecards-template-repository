@@ -1,34 +1,30 @@
 {
-    "type": "AdaptiveCard",
-    "body": [
-        {
-            "{{#each }}": 
-            {
-                "type": "Container",
-                "items":
-                [
-                    {
-                        "type": "TextBlock",
-                        "text": "{{name}}",
-                        "horizontalAlignment": "Center",
-                        "size": "ExtraLarge"
-                    },
-                    {
-                        "type": "FactSet",
-                        "facts" : 
-                        [
-                            {
-                                "{{#each hostNameSslStates}}" : {
-                                    "title" : "{{name}}",
-                                    "value" : "{{sslState}}"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            }
-        }
-    ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.0"
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "{{#each value}}": {
+        "type": "Container",
+        "items": [
+          {
+            "type": "TextBlock",
+            "text": "{{name}}",
+            "horizontalAlignment": "Center",
+            "size": "ExtraLarge"
+          },
+          {
+            "type": "FactSet",
+            "facts": [
+              {
+                "{{#each hostNameSslStates}}": {
+                  "title": "{{name}}",
+                  "value": "{{sslState}}"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }

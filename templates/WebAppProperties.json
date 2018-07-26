@@ -1,5 +1,6 @@
 {
   "type": "AdaptiveCard",
+  "version": "1.0",
   "$sampleData":{
     "id": "/subscriptions/47c80630-3d74-4b3e-a2f4-57e6368cd8c6/resourceGroups/AdaptiveCards/providers/Microsoft.Web/sites/adaptivecards-ci",
     "name": "adaptivecards-ci",
@@ -149,7 +150,5 @@
       "type": "TextBlock",
       "text": "{{properties.defaultHostName}}"
     }
-  ],
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "version": "1.0"
+  ]
 }
