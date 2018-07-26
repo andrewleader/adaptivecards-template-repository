@@ -44,10 +44,12 @@
     {
       "type": "Container",
       "items": {
-        "{{#each value}}": {
-          "type": "TextBlock",
-          "text": "Deployment {{name}} - {{author}}"
-        }
+        "{{#each value}}": [
+          {
+            "type": "TextBlock",
+            "text": "Deployment {{name}} - {{author}}"
+          }
+        ]
       }
     },
     {
