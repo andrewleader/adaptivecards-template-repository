@@ -10,51 +10,48 @@
                     "items": [
                         {
                             "type": "TextBlock",
-                            "weight": "Bolder",
+                            "weight": "bolder",
                             "text": "Site Name:"
                         },
                         {
                             "type": "TextBlock",
-                            "spacing": "None",
+                            "spacing": "none",
                             "text": "AdaptiveCard"
                         },
                         {
                             "type": "TextBlock",
-                            "weight": "Bolder",
+                            "weight": "bolder",
                             "text": "Resource Group:"
                         },
                         {
                             "type": "TextBlock",
-                            "spacing": "None",
+                            "spacing": "none",
                             "text": "AdaptiveCards"
                         }
                     ],
-                    "width": {
-                        "physicalSize": 130,
-                        "unit": 1
-                    }
+                    "width": "auto"
                 },
                 {
                     "type": "Column",
                     "items": [
                         {
                             "type": "TextBlock",
-                            "weight": "Bolder",
+                            "weight": "bolder",
                             "text": "Status:"
                         },
                         {
                             "type": "TextBlock",
-                            "spacing": "None",
+                            "spacing": "none",
                             "text": "Running"
                         },
                         {
                             "type": "TextBlock",
-                            "weight": "Bolder",
+                            "weight": "bolder",
                             "text": "Region:"
                         },
                         {
                             "type": "TextBlock",
-                            "spacing": "None",
+                            "spacing": "none",
                             "text": "Central US"
                         }
                     ],
@@ -78,12 +75,12 @@
         },
         {
             "type": "Container",
-            "spacing": "Large",
+            "spacing": "large",
             "separator": true,
             "items": [
                 {
                     "type": "TextBlock",
-                    "weight": "Bolder",
+                    "weight": "bolder",
                     "text": "Deployments"
                 }
             ]
@@ -98,7 +95,7 @@
                         {
                             "type": "Image",
                             "url": "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-512.png",
-                            "size": "Small"
+                            "size": "small"
                         }
                     ],
                     "width": "auto"
@@ -112,7 +109,7 @@
                         },
                         {
                             "type": "TextBlock",
-                            "spacing": "Small",
+                            "spacing": "small",
                             "text": "[Build 20180308.3](https://adaptivecards.io) \n[Release: 84](https://adaptivecards.io)"
                         }
                     ],
@@ -120,7 +117,7 @@
                 },
                 {
                     "type": "Column",
-                    "verticalContentAlignment": "Center",
+                    "verticalContentAlignment": "center",
                     "items": [
                         {
                             "type": "TextBlock",
@@ -141,7 +138,7 @@
                         {
                             "type": "Image",
                             "url": "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Close_Icon_Dark-512.png",
-                            "size": "Small"
+                            "size": "small"
                         }
                     ],
                     "width": "auto"
@@ -155,7 +152,7 @@
                         },
                         {
                             "type": "TextBlock",
-                            "spacing": "Small",
+                            "spacing": "small",
                             "text": "[Build 20180308.1](https://adaptivecards.io) \n[Release: 83](https://adaptivecards.io)"
                         }
                     ],
@@ -163,7 +160,7 @@
                 },
                 {
                     "type": "Column",
-                    "verticalContentAlignment": "Center",
+                    "verticalContentAlignment": "center",
                     "items": [
                         {
                             "type": "TextBlock",
@@ -184,7 +181,7 @@
                         {
                             "type": "Image",
                             "url": "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-512.png",
-                            "size": "Small"
+                            "size": "small"
                         }
                     ],
                     "width": "auto"
@@ -198,7 +195,7 @@
                         },
                         {
                             "type": "TextBlock",
-                            "spacing": "Small",
+                            "spacing": "small",
                             "text": "[Build 20180306.4](https://adaptivecards.io) \n[Release: 82](https://adaptivecards.io)"
                         }
                     ],
@@ -206,7 +203,7 @@
                 },
                 {
                     "type": "Column",
-                    "verticalContentAlignment": "Center",
+                    "verticalContentAlignment": "center",
                     "items": [
                         {
                             "type": "TextBlock",
@@ -219,12 +216,12 @@
         },
         {
             "type": "Container",
-            "spacing": "Large",
+            "spacing": "large",
             "separator": true,
             "items": [
                 {
                     "type": "TextBlock",
-                    "weight": "Bolder",
+                    "weight": "bolder",
                     "text": "Metrics"
                 },
                 {
