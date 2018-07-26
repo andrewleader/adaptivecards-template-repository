@@ -38,6 +38,10 @@
   },
   "body": [
     {
+      "type": "TextBlock",
+      "text": "Value {{value}} + {{value.length}}"
+    },
+    {
       "type": "Container",
       "items": {
         "{{#each value}}": {
