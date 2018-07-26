@@ -1,5 +1,116 @@
 {
   "type": "AdaptiveCard",
+  "$sampleData":{
+    "id": "/subscriptions/47c80630-3d74-4b3e-a2f4-57e6368cd8c6/resourceGroups/AdaptiveCards/providers/Microsoft.Web/sites/adaptivecards-ci",
+    "name": "adaptivecards-ci",
+    "type": "Microsoft.Web/sites",
+    "kind": "app",
+    "location": "Central US",
+    "tags": {
+      "hidden-related:/subscriptions/47c80630-3d74-4b3e-a2f4-57e6368cd8c6/resourcegroups/AdaptiveCards/providers/Microsoft.Web/serverfarms/AdaptiveCards": "empty"
+    },
+    "properties": {
+      "name": "adaptivecards-ci",
+      "state": "Running",
+      "hostNames": [
+        "adaptivecards-ci.azurewebsites.net"
+      ],
+      "webSpace": "AdaptiveCards-CentralUSwebspace",
+      "selfLink": "https://waws-prod-dm1-027.api.azurewebsites.windows.net:454/subscriptions/47c80630-3d74-4b3e-a2f4-57e6368cd8c6/webspaces/AdaptiveCards-CentralUSwebspace/sites/adaptivecards-ci",
+      "repositorySiteName": "adaptivecards-ci",
+      "owner": null,
+      "usageState": "Normal",
+      "enabled": true,
+      "adminEnabled": true,
+      "enabledHostNames": [
+        "adaptivecards-ci.azurewebsites.net",
+        "adaptivecards-ci.scm.azurewebsites.net"
+      ],
+      "siteProperties": {
+        "metadata": null,
+        "properties": [
+          {
+            "name": "LinuxFxVersion",
+            "value": ""
+          },
+          {
+            "name": "WindowsFxVersion",
+            "value": null
+          }
+        ],
+        "appSettings": null
+      },
+      "availabilityState": "Normal",
+      "sslCertificates": null,
+      "csrs": [],
+      "cers": null,
+      "siteMode": null,
+      "hostNameSslStates": [
+        {
+          "name": "adaptivecards-ci.azurewebsites.net",
+          "sslState": "Disabled",
+          "ipBasedSslResult": null,
+          "virtualIP": null,
+          "thumbprint": null,
+          "toUpdate": null,
+          "toUpdateIpBasedSsl": null,
+          "ipBasedSslState": "NotConfigured",
+          "hostType": "Standard"
+        },
+        {
+          "name": "adaptivecards-ci.scm.azurewebsites.net",
+          "sslState": "Disabled",
+          "ipBasedSslResult": null,
+          "virtualIP": null,
+          "thumbprint": null,
+          "toUpdate": null,
+          "toUpdateIpBasedSsl": null,
+          "ipBasedSslState": "NotConfigured",
+          "hostType": "Repository"
+        }
+      ],
+      "computeMode": null,
+      "serverFarm": null,
+      "serverFarmId": "/subscriptions/47c80630-3d74-4b3e-a2f4-57e6368cd8c6/resourceGroups/AdaptiveCards/providers/Microsoft.Web/serverfarms/AdaptiveCards",
+      "reserved": false,
+      "isXenon": false,
+      "lastModifiedTimeUtc": "2018-07-08T05:38:57.6166667",
+      "storageRecoveryDefaultState": "Running",
+      "contentAvailabilityState": "Normal",
+      "runtimeAvailabilityState": "Normal",
+      "siteConfig": null,
+      "deploymentId": "adaptivecards-ci",
+      "trafficManagerHostNames": null,
+      "sku": "Standard",
+      "scmSiteAlsoStopped": false,
+      "targetSwapSlot": null,
+      "hostingEnvironment": null,
+      "hostingEnvironmentProfile": null,
+      "clientAffinityEnabled": true,
+      "clientCertEnabled": false,
+      "hostNamesDisabled": false,
+      "domainVerificationIdentifiers": null,
+      "kind": "app",
+      "outboundIpAddresses": "52.173.249.137,52.176.59.177,52.173.201.190,52.173.203.66,52.173.251.28",
+      "possibleOutboundIpAddresses": "52.173.249.137,52.176.59.177,52.173.201.190,52.173.203.66,52.173.251.28,52.173.202.202,52.173.200.111",
+      "containerSize": 0,
+      "dailyMemoryTimeQuota": 0,
+      "suspendedTill": null,
+      "siteDisabledReason": 0,
+      "functionExecutionUnitsCache": null,
+      "maxNumberOfWorkers": null,
+      "homeStamp": "waws-prod-dm1-027",
+      "cloningInfo": null,
+      "hostingEnvironmentId": null,
+      "tags": {
+        "hidden-related:/subscriptions/47c80630-3d74-4b3e-a2f4-57e6368cd8c6/resourcegroups/AdaptiveCards/providers/Microsoft.Web/serverfarms/AdaptiveCards": "empty"
+      },
+      "resourceGroup": "AdaptiveCards",
+      "defaultHostName": "adaptivecards-ci.azurewebsites.net",
+      "slotSwapStatus": null,
+      "httpsOnly": false
+    }
+  },
   "body": [
     {
       "type": "TextBlock",

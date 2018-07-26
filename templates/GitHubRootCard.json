@@ -1,5 +1,7 @@
 {
   "type": "AdaptiveCard",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
   "data": "{{this}}",
   "body": [
     {
@@ -15,8 +17,14 @@
         "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroup}}/providers/Microsoft.Web/sites/{{siteName}}?api-version=2016-08-01",
       "templateUrl":
         "https://adaptivecards-ex-templates.azurewebsites.net/api/templates/WebAppProperties"
+    },
+    {
+      "type": "HostedCard",
+      "id": "deployments",
+      "dataId":
+        "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroup}}/providers/Microsoft.Web/sites/{{siteName}}/deployments?api-version=2016-08-01",
+      "templateUrl":
+        "https://adaptivecards-ex-templates.azurewebsites.net/api/templates/Deployments"
     }
-  ],
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "version": "1.0"
+  ]
 }
