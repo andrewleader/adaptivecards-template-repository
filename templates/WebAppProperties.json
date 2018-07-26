@@ -1,23 +1,24 @@
 {
   "type": "AdaptiveCard",
   "version": "1.0",
-  "$sampleData":{
-    "id": "/subscriptions/47c80630-3d74-4b3e-a2f4-57e6368cd8c6/resourceGroups/AdaptiveCards/providers/Microsoft.Web/sites/adaptivecards-ci",
+  "$sampleData": {
+    "id":
+      "/subscriptions/47c80630-3d74-4b3e-a2f4-57e6368cd8c6/resourceGroups/AdaptiveCards/providers/Microsoft.Web/sites/adaptivecards-ci",
     "name": "adaptivecards-ci",
     "type": "Microsoft.Web/sites",
     "kind": "app",
     "location": "Central US",
     "tags": {
-      "hidden-related:/subscriptions/47c80630-3d74-4b3e-a2f4-57e6368cd8c6/resourcegroups/AdaptiveCards/providers/Microsoft.Web/serverfarms/AdaptiveCards": "empty"
+      "hidden-related:/subscriptions/47c80630-3d74-4b3e-a2f4-57e6368cd8c6/resourcegroups/AdaptiveCards/providers/Microsoft.Web/serverfarms/AdaptiveCards":
+        "empty"
     },
     "properties": {
       "name": "adaptivecards-ci",
       "state": "Running",
-      "hostNames": [
-        "adaptivecards-ci.azurewebsites.net"
-      ],
+      "hostNames": ["adaptivecards-ci.azurewebsites.net"],
       "webSpace": "AdaptiveCards-CentralUSwebspace",
-      "selfLink": "https://waws-prod-dm1-027.api.azurewebsites.windows.net:454/subscriptions/47c80630-3d74-4b3e-a2f4-57e6368cd8c6/webspaces/AdaptiveCards-CentralUSwebspace/sites/adaptivecards-ci",
+      "selfLink":
+        "https://waws-prod-dm1-027.api.azurewebsites.windows.net:454/subscriptions/47c80630-3d74-4b3e-a2f4-57e6368cd8c6/webspaces/AdaptiveCards-CentralUSwebspace/sites/adaptivecards-ci",
       "repositorySiteName": "adaptivecards-ci",
       "owner": null,
       "usageState": "Normal",
@@ -72,7 +73,8 @@
       ],
       "computeMode": null,
       "serverFarm": null,
-      "serverFarmId": "/subscriptions/47c80630-3d74-4b3e-a2f4-57e6368cd8c6/resourceGroups/AdaptiveCards/providers/Microsoft.Web/serverfarms/AdaptiveCards",
+      "serverFarmId":
+        "/subscriptions/47c80630-3d74-4b3e-a2f4-57e6368cd8c6/resourceGroups/AdaptiveCards/providers/Microsoft.Web/serverfarms/AdaptiveCards",
       "reserved": false,
       "isXenon": false,
       "lastModifiedTimeUtc": "2018-07-08T05:38:57.6166667",
@@ -92,8 +94,10 @@
       "hostNamesDisabled": false,
       "domainVerificationIdentifiers": null,
       "kind": "app",
-      "outboundIpAddresses": "52.173.249.137,52.176.59.177,52.173.201.190,52.173.203.66,52.173.251.28",
-      "possibleOutboundIpAddresses": "52.173.249.137,52.176.59.177,52.173.201.190,52.173.203.66,52.173.251.28,52.173.202.202,52.173.200.111",
+      "outboundIpAddresses":
+        "52.173.249.137,52.176.59.177,52.173.201.190,52.173.203.66,52.173.251.28",
+      "possibleOutboundIpAddresses":
+        "52.173.249.137,52.176.59.177,52.173.201.190,52.173.203.66,52.173.251.28,52.173.202.202,52.173.200.111",
       "containerSize": 0,
       "dailyMemoryTimeQuota": 0,
       "suspendedTill": null,
@@ -104,7 +108,8 @@
       "cloningInfo": null,
       "hostingEnvironmentId": null,
       "tags": {
-        "hidden-related:/subscriptions/47c80630-3d74-4b3e-a2f4-57e6368cd8c6/resourcegroups/AdaptiveCards/providers/Microsoft.Web/serverfarms/AdaptiveCards": "empty"
+        "hidden-related:/subscriptions/47c80630-3d74-4b3e-a2f4-57e6368cd8c6/resourcegroups/AdaptiveCards/providers/Microsoft.Web/serverfarms/AdaptiveCards":
+          "empty"
       },
       "resourceGroup": "AdaptiveCards",
       "defaultHostName": "adaptivecards-ci.azurewebsites.net",
@@ -114,41 +119,80 @@
   },
   "body": [
     {
-      "type": "TextBlock",
-      "text": "WebAppProperties for {{name}}"
-    },
-    {
-      "type": "TextBlock",
-      "size": "Large",
-      "weight": "Bolder",
-      "text": "{{name}}"
-    },
-    {
-      "type": "TextBlock",
-      "weight": "Lighter",
-      "text": "ResourceGroup"
-    },
-    {
-      "type": "TextBlock",
-      "text": "{{properties.resourceGroup}}"
-    },
-    {
-      "type": "TextBlock",
-      "weight": "Lighter",
-      "text": "Location"
-    },
-    {
-      "type": "TextBlock",
-      "text": "{{location}}"
-    },
-    {
-      "type": "TextBlock",
-      "weight": "Lighter",
-      "text": "URL"
-    },
-    {
-      "type": "TextBlock",
-      "text": "{{properties.defaultHostName}}"
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "weight": "bolder",
+              "text": "URL:"
+            },
+            {
+              "type": "TextBlock",
+              "spacing": "none",
+              "text": "[{{siteProperties.defaultHostName}}]({{siteProperties.defaultHostName}})"
+            },
+            {
+              "type": "TextBlock",
+              "weight": "bolder",
+              "text": "Resource Group:",
+              "spacing": "medium"
+            },
+            {
+              "type": "TextBlock",
+              "spacing": "none",
+              "text": "{{properties.resourceGroup}}"
+            }
+          ],
+          "width": "auto"
+        },
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "weight": "bolder",
+              "text": "Status:"
+            },
+            {
+              "type": "TextBlock",
+              "spacing": "none",
+              "text": "✔ {{properties.state}}",
+              "color": "good"
+            },
+            {
+              "type": "TextBlock",
+              "weight": "bolder",
+              "text": "Region:",
+              "spacing": "medium"
+            },
+            {
+              "type": "TextBlock",
+              "spacing": "none",
+              "text": "{{location}}"
+            }
+          ],
+          "width": "stretch"
+        },
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "[Manage Site](https://adaptivecards.io) ",
+              "horizontalAlignment": "right"
+            },
+            {
+              "type": "TextBlock",
+              "text": "[Restart Site](https://adaptivecards.io) ",
+              "horizontalAlignment": "right"
+            }
+          ],
+          "width": "auto"
+        }
+      ]
     }
   ]
 }
