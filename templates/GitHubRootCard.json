@@ -11,12 +11,12 @@
                         {
                             "type": "TextBlock",
                             "weight": "bolder",
-                            "text": "Site Name:"
+                            "text": "URL:"
                         },
                         {
                             "type": "TextBlock",
                             "spacing": "none",
-                            "text": "AdaptiveCard"
+                            "text": "[https://adaptivecards.io](https://adaptivecards.io)"
                         },
                         {
                             "type": "TextBlock",
@@ -64,14 +64,16 @@
                     "items": [
                         {
                             "type": "TextBlock",
-                            "text": "[Manage Site](https://adaptivecards.io) "
+                            "text": "[Manage Site](https://adaptivecards.io) ",
+                            "horizontalAlignment": "right"
                         },
                         {
                             "type": "TextBlock",
-                            "text": "[Restart Site](https://adaptivecards.io) "
+                            "text": "[Restart Site](https://adaptivecards.io) ",
+                            "horizontalAlignment": "right"
                         }
                     ],
-                    "width": "stretch"
+                    "width": "auto"
                 }
            ]
         },
