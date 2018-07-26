@@ -39,17 +39,19 @@
   "body": [
     {
       "type": "TextBlock",
-      "text": "Value {{value}} / {{value.length}} / {{value[0].name}}"
+      "text": "{{value[0].name}}"
+    },
+    {
+      "type": "TextBlock",
+      "text": "{{value[1].name}}"
     },
     {
       "type": "Container",
       "items": {
-        "{{#each value}}": [
-          {
-            "type": "TextBlock",
-            "text": "Deployment {{name}} - {{author}}"
-          }
-        ]
+        "{{#each value}}": {
+          "type": "TextBlock",
+          "text": "Deployment {{name}} - {{properties.author}}"
+        }
       }
     },
     {
@@ -57,7 +59,7 @@
       "facts": {
         "{{#each value}}": {
           "title": "{{name}}",
-          "value": "{{author}}"
+          "value": "{{properties.author}}"
         }
       }
     }

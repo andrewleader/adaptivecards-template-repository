@@ -129,7 +129,7 @@
     },
     {
       "type": "TextBlock",
-      "text": "{{resourceGroup}}"
+      "text": "{{properties.resourceGroup}}"
     },
     {
       "type": "TextBlock",
@@ -147,7 +147,7 @@
     },
     {
       "type": "TextBlock",
-      "text": "{{defaultHostName}}"
+      "text": "{{properties.defaultHostName}}"
     }
   ],
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",

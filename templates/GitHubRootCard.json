@@ -7,7 +7,7 @@
     {
       "type": "TextBlock",
       "text":
-        "Root card for {{subscriptionId}} - https://management.azure.com/subscriptions/resourceGroups/{{resourceGroup}}/providers/Microsoft.Web/sites/{{siteName}}?api-version=2016-08-01",
+        "Root card for {{subscriptionId}}",
       "wrap": true
     },
     {
@@ -16,7 +16,7 @@
       "dataId":
         "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroup}}/providers/Microsoft.Web/sites/{{siteName}}?api-version=2016-08-01",
       "templateUrl":
-        "https://adaptivecards-ex-templates.azurewebsites.net/api/templates/WebAppProperties"
+        "https://raw.githubusercontent.com/andrewleader/adaptivecards-template-repository/master/templates/WebAppProperties.json"
     },
     {
       "type": "HostedCard",
@@ -24,7 +24,7 @@
       "dataId":
         "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroup}}/providers/Microsoft.Web/sites/{{siteName}}/deployments?api-version=2016-08-01",
       "templateUrl":
-        "https://adaptivecards-ex-templates.azurewebsites.net/api/templates/Deployments"
+        "https://raw.githubusercontent.com/andrewleader/adaptivecards-template-repository/master/templates/Deployments.json"
     }
   ]
 }
