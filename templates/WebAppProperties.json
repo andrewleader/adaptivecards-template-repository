@@ -3,7 +3,7 @@
     "body": 
     [
         {
-            "{{#each this}}" :
+            "{{#each value}}" :
             {
                 "type": "Container",
                 "separator": true,
