@@ -1,108 +1,102 @@
 {
-    "type": "AdaptiveCard",
-    "body": 
-    [
-        {
-            "type": "TextBlock",
-            "text": "WebAppProperties"
-        },
-        {
-            "{{#each value}}" :
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "WebAppProperties"
+    },
+    {
+      "type": "Container",
+      "items": {
+        "{{#each value}}": {
+          "type": "Container",
+          "separator": true,
+          "items": [
             {
-                "type": "Container",
-                "separator": true,
-                "items": 
-                [
-                    {
-                        "type": "Container",
-                        "separator": true,
-                        "items":
-                        [
-                            {
-                                "type": "TextBlock",
-                                "size": "Large",
-                                "weight": "Bolder",
-                                "text": "{{name}}"
-                            },
-                            {
-                                "type": "TextBlock",
-                                "weight": "Bolder",
-                                "color": "Accent",
-                                "text": "Properties"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "Container",
-                        "separator": true,
-                        "items":
-                        [
-                            {
-                                "type": "TextBlock",
-                                "weight": "Lighter",
-                                "text": "ResourceGroup"
-                            },
-                            {
-                                "type": "TextBlock",
-                                "text": "{{resourceGroup}}"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "Container",
-                        "separator": true,
-                        "items":
-                        [
-                            {
-                                "type": "TextBlock",
-                                "weight": "Lighter",
-                                "text": "Location"
-                            },
-                            {
-                                "type": "TextBlock",
-                                "text": "{{location}}"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "Container",
-                        "separator": true,
-                        "items":
-                        [
-                            {
-                                "type": "TextBlock",
-                                "weight": "Lighter",
-                                "text": "URL"
-                            },
-                            {
-                                "type": "TextBlock",
-                                "text": "{{defaultHostName}}"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "Container",
-                        "separator": true,
-                        "items":
-                        [
-                            {
-                                "type": "TextBlock",
-                                "weight": "Lighter",
-                                "text": "Hosts"
-                            },
-                            {
-                                "{{#each hostNames}}" :
-                                {
-                                    "type": "TextBlock",
-                                    "text": "{{this}}"
-                                }
-                            }
-                        ]
-                    }
-                ]
+              "type": "Container",
+              "separator": true,
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "size": "Large",
+                  "weight": "Bolder",
+                  "text": "{{name}}"
+                },
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "color": "Accent",
+                  "text": "Properties"
+                }
+              ]
+            },
+            {
+              "type": "Container",
+              "separator": true,
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Lighter",
+                  "text": "ResourceGroup"
+                },
+                {
+                  "type": "TextBlock",
+                  "text": "{{resourceGroup}}"
+                }
+              ]
+            },
+            {
+              "type": "Container",
+              "separator": true,
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Lighter",
+                  "text": "Location"
+                },
+                {
+                  "type": "TextBlock",
+                  "text": "{{location}}"
+                }
+              ]
+            },
+            {
+              "type": "Container",
+              "separator": true,
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Lighter",
+                  "text": "URL"
+                },
+                {
+                  "type": "TextBlock",
+                  "text": "{{defaultHostName}}"
+                }
+              ]
+            },
+            {
+              "type": "Container",
+              "separator": true,
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Lighter",
+                  "text": "Hosts"
+                },
+                {
+                  "{{#each hostNames}}": {
+                    "type": "TextBlock",
+                    "text": "{{this}}"
+                  }
+                }
+              ]
             }
+          ]
         }
-    ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.0"
+      }
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
 }
