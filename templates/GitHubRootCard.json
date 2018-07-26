@@ -16,7 +16,7 @@
       "dataId":
         "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroup}}/providers/Microsoft.Web/sites/{{siteName}}?api-version=2016-08-01",
       "templateUrl":
-        "https://raw.githubusercontent.com/andrewleader/adaptivecards-template-repository/master/templates/WebAppProperties.json"
+        "https://adaptivecards-ex-templates.azurewebsites.net/api/templates/WebAppProperties"
     },
     {
       "type": "HostedCard",
@@ -24,7 +24,7 @@
       "dataId":
         "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroup}}/providers/Microsoft.Web/sites/{{siteName}}/deployments?api-version=2016-08-01",
       "templateUrl":
-        "https://raw.githubusercontent.com/andrewleader/adaptivecards-template-repository/master/templates/Deployments.json"
+        "https://adaptivecards-ex-templates.azurewebsites.net/api/templates/Deployments"
     }
   ]
 }
