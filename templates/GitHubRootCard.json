@@ -1,7 +1,6 @@
 {
   "type": "AdaptiveCard",
   "version": "1.0",
-  "data": "{{this}}",
   "body": [
     {
       "type": "HostedCard",
