@@ -43,7 +43,8 @@
                         {
                             "type": "TextBlock",
                             "spacing": "none",
-                            "text": "✔ Running"
+                            "text": "✔ Running",
+                            "color": "good"
                         },
                         {
                             "type": "TextBlock",
