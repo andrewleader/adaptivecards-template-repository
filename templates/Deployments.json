@@ -16,7 +16,7 @@
       "items": {
         "{{#each value}}": {
           "type": "TextBlock",
-          "text": "-> {{name}} - {{properties.author}}"
+          "text": "-> {{name}} - {{id}}"
         }
       }
     },
