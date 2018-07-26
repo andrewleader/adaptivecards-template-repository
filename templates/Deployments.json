@@ -50,7 +50,7 @@
       "items": {
         "{{#each value}}": {
           "type": "TextBlock",
-          "text": "Deployment {{name}} - {{properties.author}}"
+          "text": "-> {{name}} - {{properties.author}}"
         }
       }
     },
