@@ -15,50 +15,6 @@
         "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroup}}/providers/Microsoft.Web/sites/{{siteName}}?api-version=2016-08-01",
       "templateUrl":
         "https://adaptivecards-ex-templates.azurewebsites.net/api/templates/WebAppProperties"
-    },
-    {
-      "type": "TextBlock",
-      "size": "Large",
-      "weight": "Bolder",
-      "text": "{{name}}"
-    },
-    {
-      "type": "TextBlock",
-      "weight": "Bolder",
-      "color": "Accent",
-      "text": "Properties"
-    },
-    {
-      "type": "TextBlock",
-      "weight": "Lighter",
-      "text": "ResourceGroup"
-    },
-    {
-      "type": "TextBlock",
-      "text": "{{resourceGroup}}"
-    },
-    {
-      "type": "TextBlock",
-      "weight": "Lighter",
-      "text": "Location"
-    },
-    {
-      "type": "TextBlock",
-      "text": "{{location}}"
-    },
-    {
-      "type": "TextBlock",
-      "weight": "Lighter",
-      "text": "URL"
-    },
-    {
-      "type": "TextBlock",
-      "text": "{{defaultHostName}}"
-    },
-    {
-      "type": "TextBlock",
-      "weight": "Lighter",
-      "text": "Hosts"
     }
   ],
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
