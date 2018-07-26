@@ -36,52 +36,10 @@
       }
     ]
   },
-  "body": [
-    {
+  "body": {
+    "{{#each value}}": {
       "type": "TextBlock",
-      "text": "{{value[0].name}}"
-    },
-    {
-      "{{#each value}}": {
-        "type": "TextBlock",
-        "text": "Deployment {{name}} - {{properties.author}}"
-      }
-    },
-    {
-      "type": "TextBlock",
-      "text": "{{value[1].name}}"
-    },
-    {
-      "type": "Container",
-      "items": {
-        "{{#each value}}": {
-          "type": "TextBlock",
-          "text": "Deployment {{name}} - {{properties.author}}"
-        }
-      }
-    },
-    {
-      "type": "ColumnSet",
-      "columns": [
-        {
-          "type": "Column",
-          "items": {
-            "{{#each value}}": {
-              "type": "TextBlock",
-              "text": "{{name}}"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "type": "FactSet",
-      "facts": {
-        "{{#each value}}": {
-          "title": "{{name}}",
-          "value": "{{properties.author}}"
-        }
-      }
+      "text": "Deployment {{name}} - {{properties.author}}"
     }
-  ]
+  }
 }
