@@ -2,7 +2,7 @@
   "type": "AdaptiveCard",
   "version": "1.0",
   "body": {
-    "{{#each value}}": {
+    "{{#each this.value}}": {
       "type": "TextBlock",
       "text": "Deployment {{this.name}} - {{properties.author}}"
     }
