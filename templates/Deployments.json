@@ -55,6 +55,20 @@
       }
     },
     {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "items": {
+            "{{#each value}}": {
+              "type": "TextBlock",
+              "text": "{{name}}"
+            }
+          }
+        }
+      ]
+    },
+    {
       "type": "FactSet",
       "facts": {
         "{{#each value}}": {
