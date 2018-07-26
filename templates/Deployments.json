@@ -36,42 +36,16 @@
       }
     ]
   },
-  "body": [
-    {
-      "type": "TextBlock",
-      "text": "{{value[0].name}}"
-    },
-    {
-      "type": "TextBlock",
-      "text": "{{value[1].name}}"
-    },
-    {
+  "body": {
+    "{{#each value}}": {
       "type": "Container",
-      "items": {
-        "{{#each value}}": {
-          "type": "Container",
-          "items": [
-            {
-              "type": "TextBlock",
-              "text": "-> {{name}} - {{properties.author}}"
-            },
-            {
-              "type": "HostedCard",
-              "dataId": "https://management.azure.com{{id}}",
-              "templateUrl": "https://adaptivecards-ex-templates.azurewebsites.net/api/templates/Deployment"
-            }
-          ]
+      "items": [
+        {
+          "type": "HostedCard",
+          "dataId": "https://management.azure.com{{id}}",
+          "templateUrl": "https://adaptivecards-ex-templates.azurewebsites.net/api/templates/Deployment"
         }
-      }
-    },
-    {
-      "type": "FactSet",
-      "facts": {
-        "{{#each value}}": {
-          "title": "{{name}}",
-          "value": "{{properties.author}}"
-        }
-      }
+      ]
     }
-  ]
+  }
 }

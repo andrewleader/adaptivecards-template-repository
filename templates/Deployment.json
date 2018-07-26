@@ -34,30 +34,48 @@
   },
   "body": [
     {
-      "type": "TextBlock",
-      "text": "{{value[0].name}}"
-    },
-    {
-      "type": "TextBlock",
-      "text": "{{value[1].name}}"
-    },
-    {
-      "type": "Container",
-      "items": {
-        "{{#each value}}": {
-          "type": "TextBlock",
-          "text": "-> {{name}} - {{properties.author}}"
+      "type": "ColumnSet",
+      "horizontalAlignment": "left",
+      "columns": [
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-512.png",
+              "size": "small"
+            }
+          ],
+          "width": "auto"
+        },
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Deployed successfully to production"
+            },
+            {
+              "type": "TextBlock",
+              "spacing": "small",
+              "text":
+                "[Build 20180308.3](https://adaptivecards.io) \n[Release: 84](https://adaptivecards.io)"
+            }
+          ],
+          "width": "stretch"
+        },
+        {
+          "type": "Column",
+          "verticalContentAlignment": "center",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "12:54:08 PM"
+            }
+          ],
+          "width": "auto"
         }
-      }
-    },
-    {
-      "type": "FactSet",
-      "facts": {
-        "{{#each value}}": {
-          "title": "{{name}}",
-          "value": "{{properties.author}}"
-        }
-      }
+      ]
     }
   ]
 }
