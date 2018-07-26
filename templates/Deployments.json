@@ -49,6 +49,15 @@
           "text": "Deployment {{name}} - {{author}}"
         }
       }
+    },
+    {
+      "type": "FactSet",
+      "facts": {
+        "{{#each value}}": {
+          "title": "{{name}}",
+          "value": "{{author}}"
+        }
+      }
     }
   ]
 }
