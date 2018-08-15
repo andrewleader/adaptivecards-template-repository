@@ -132,7 +132,7 @@
             {
               "type": "TextBlock",
               "spacing": "none",
-              "text": "[{{siteProperties.defaultHostName}}]({{siteProperties.defaultHostName}})"
+              "text": "[{{properties.siteProperties.defaultHostName}}]({{properties.siteProperties.defaultHostName}})"
             },
             {
               "type": "TextBlock",
