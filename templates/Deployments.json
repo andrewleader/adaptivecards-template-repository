@@ -34,88 +34,55 @@
   },
   "body": {
     "{{#each value}}": {
-      "type": "AdaptiveCard",
-      "version": "1.0",
-      "$sampleData": {
-        "id": "/subscriptions/47c80630-3d74-4b3e-a2f4-57e6368cd8c6/resourceGroups/AdaptiveCards/providers/Microsoft.Web/sites/adaptivecards-ci/deployments/1291525457129548",
-        "name": "adaptivecards-ci/1291525457129548",
-        "type": "Microsoft.Web/sites/deployments",
-        "location": "Central US",
-        "properties": {
-          "id": "1291525457129548",
-          "status": 4,
-          "status_text": "",
-          "author_email": "",
-          "author": "Tuan Anh Pham",
-          "deployer": "VSTS",
-          "message": "{\"type\":\"Deployment\",\"commitId\":\"9608d6da8ff915e436565f8d5f50dccf259d81a1\",\"buildId\":\"9542982\",\"releaseId\":\"129\",\"buildNumber\":\"20180504.3\",\"releaseName\":\"Release-104\",\"repoProvider\":\"GitHub\",\"collectionUrl\":\"https://microsoft.visualstudio.com/\",\"teamProject\":\"56cf629e-8f3a-4412-acbc-bf69366c552c\",\"slotName\":\"production\"}",
-          "progress": "",
-          "received_time": "2018-05-04T18:05:33.3087147Z",
-          "start_time": "2018-05-04T18:05:33.3087147Z",
-          "end_time": "2018-05-04T18:05:33.3087147Z",
-          "last_success_end_time": "2018-05-04T18:05:33.3087147Z",
-          "complete": true,
-          "active": true,
-          "is_temp": false,
-          "is_readonly": true,
-          "url": "https://adaptivecards-ci.scm.azurewebsites.net/api/deployments/1291525457129548",
-          "log_url": "https://adaptivecards-ci.scm.azurewebsites.net/api/deployments/1291525457129548/log",
-          "site_name": "adaptivecards-ci"
-        }
-      },
-      "body": [
+      "{{#let}}": [
         {
-          "{{#let}}": [
+          "message": "{{JSON.parse(properties.message)}}"
+        }
+      ],
+      "type": "ColumnSet",
+      "horizontalAlignment": "left",
+      "columns": [
+        {
+          "type": "Column",
+          "items": [
             {
-              "message": "{{JSON.parse(properties.message)}}"
+              "type": "Image",
+              "url": "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-512.png",
+              "size": "small"
             }
           ],
-          "type": "ColumnSet",
-          "horizontalAlignment": "left",
-          "columns": [
+          "width": "auto"
+        },
+        {
+          "type": "Column",
+          "items": [
             {
-              "type": "Column",
-              "items": [
-                {
-                  "type": "Image",
-                  "url": "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-512.png",
-                  "size": "small"
-                }
-              ],
-              "width": "auto"
+              "type": "TextBlock",
+              "{{#if properties.status == 4}}": {
+                "text": "Deployed successfully to {{message.slotName}}"
+              },
+              "{{#else}}}": {
+                "text": "Deployed failed to {{message.slotName}}"
+              }
             },
             {
-              "type": "Column",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "{{#if properties.status == 4}}": {
-                    "text": "Deployed successfully to {{message.slotName}}"
-                  },
-                  "{{#else}}}": {
-                    "text": "Deployed failed to {{message.slotName}}"
-                  }
-                },
-                {
-                  "type": "TextBlock",
-                  "spacing": "small",
-                  "text": "[Build {{message.buildNumber}}]({{properties.url}}) \n[Release: {{message.releaseId]({{properties.url}})"
-                }
-              ],
-              "width": "stretch"
-            },
-            {
-              "type": "Column",
-              "verticalContentAlignment": "center",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "{{DATE({{properties.end_time}})}}"
-                }
-              ],
-              "width": "auto"
+              "type": "TextBlock",
+              "spacing": "small",
+              "text": "[Build {{message.buildNumber}}]({{properties.url}}) \n[Release: {{message.releaseId]({{properties.url}})"
             }
-          ]
+          ],
+          "width": "stretch"
+        },
+        {
+          "type": "Column",
+          "verticalContentAlignment": "center",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "{{DATE({{properties.end_time}})}}"
+            }
+          ],
+          "width": "auto"
         }
       ]
     }
