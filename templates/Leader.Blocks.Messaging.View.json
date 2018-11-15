@@ -1,0 +1,30 @@
+{
+  "content": {
+    "text": [
+      "Jill Bender from online!",
+      "Check out where we camped last weekend! It was incredible, wish you could have come on the backpacking trip!"
+    ],
+    "images": [
+      "https://unsplash.it/360/180?image=1043",
+      {
+        "url": "https://unsplash.it/64?image=1027",
+        "hints": {
+          "category": [ "profile" ]
+        }
+      }
+    ],
+    "actions": [
+      {
+        "type": "Action",
+        "title": "Reply",
+        "inputs": [
+          {
+            "type": "TextInput",
+            "id": "response",
+            "placeholder": "Reply"
+          }
+        ]
+      }
+    ]
+  }
+}
